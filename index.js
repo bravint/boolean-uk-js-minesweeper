@@ -14,10 +14,10 @@ for (let i = 0; i < arr1.length; i++) {
     let position = Number(prompt(`choose a position to plant the flag from 0 to ${lastArrayNumber}`));
     state[position] = 'mine';
     if (state[position] == arr1[position]) {
-        console.log(`ggs you done goofed and hit a mine on turn ${counter}`)
+        console.log(`gg you hit a mine on turn ${counter}`)
         break
     } else if (counter == (n - numberMines)){
-        console.log(`ggs you have won!`)      
+        console.log(`gg you have won!`)      
         break
     } else {
         counter ++
