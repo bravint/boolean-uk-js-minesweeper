@@ -6,10 +6,10 @@ let state = arr1.slice();
 let counter = 1;
 
 for (let i = 0; i < numberMines; i++) {
-let rng = Math.floor(Math.random() * (10 - 1) + 1);
-arr1[rng] = 'mine';
+    let rng = Math.floor(Math.random() * (10 - 1) + 1);
+    arr1[rng] = 'mine';
 }
-console.log(arr1);
+
 for (let i = 0; i < arr1.length; i++) {
     let position = Number(prompt(`choose a position to plant the flag from 0 to ${lastArrayNumber}`));
         if (state[position] == 'mine') {
@@ -25,6 +25,6 @@ for (let i = 0; i < arr1.length; i++) {
                     break;
                 } else {
                     counter ++;
-                }
+            }
         }   
 }
