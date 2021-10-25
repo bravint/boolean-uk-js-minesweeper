@@ -5,15 +5,15 @@ let arr1 = Array.from(Array(n).keys())
 let state = arr1.slice();
 let counter = 1;
 
-for (let i = 0; i <= numberMines; i++) {
+for (let i = 0; i < numberMines; i++) {
 let rng = Math.floor(Math.random() * (10 - 1) + 1);
 arr1[rng] = 'mine';
 }
-
+console.log(arr1)
 for (let i = 0; i < arr1.length; i++) {
     let position = Number(prompt(`choose a position to plant the flag from 0 to ${lastArrayNumber}`));
     state[position] = 'mine';
-    if (state[position] == 'mine' && arr1[position] == 'mine') {
+    if (state[position] == arr1[position]) {
         console.log(`ggs you done goofed and hit a mine on turn ${counter}`)
         break
     } else if (counter == (n - numberMines)){
