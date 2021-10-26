@@ -6,22 +6,22 @@ let state = arr1.slice();
 let counter = 1;
 
 for (let i = 0; i < numberMines; i++) {
-    let rng = Math.floor(Math.random() * (10 - 1) + 1);
+    let rng = Math.floor(Math.random() * n);
     arr1[rng] = 'mine';
 }
 
 for (let i = 0; i < arr1.length; i++) {
     let position = Number(prompt(`choose a position to plant the flag from 0 to ${lastArrayNumber}`));
         if (state[position] == 'flag') {
-            console.log(`You have already placed a flag here, choose a another location`)
+            alert(`You have already placed a flag here, choose a another location`)
             i = i - 1;
         } else {
             state[position] = 'flag';
                 if (state[position] == 'flag' && arr1[position] == 'mine') {
-                    console.log(`gg you hit a mine on turn ${counter}`);
+                    alert(`gg you hit a mine on turn ${counter}`);
                     break;
                 } else if (counter == (n - numberMines)){
-                    console.log(`gg you have won!`);     
+                    alert(`gg you have won!`);     
                     break;
                 } else {
                     counter ++;
